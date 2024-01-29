@@ -1,0 +1,493 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+}
+
+body {
+  font-family: "Lumanosimo", cursive;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 600px; */
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.special_header {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+.special_header+p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+
+@media(max-width:767px) {
+  .special_header {
+    font-size: 60px;
+  }
+
+  .special_header+p {
+    margin-top: -20px;
+  }
+}
+
+.header {
+  padding: 20px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  width: 60px;
+}
+
+.header .links {
+  position: relative;
+}
+
+.header .links .icon {
+  /* position: absolute; */
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header .links .icon:hover span:nth-child(2) {
+  width: 100%;
+}
+
+.header .links .icon span {
+  /* position: relative; */
+  display: inline-block;
+  margin-bottom: 5px;
+  height: 2px;
+  background-color: #333;
+}
+
+.icon span:first-child {
+  width: 100%;
+}
+
+.icon span:nth-child(2) {
+  width: 60%;
+  transition: 0.3s;
+}
+
+.icon span:last-child {
+  width: 100%;
+}
+
+.header .links:hover ul {
+  display: block;
+}
+
+.header .links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  top: -20px;
+  right: 5px;
+}
+
+.links ul a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.links ul a:hover {
+  padding-left: 25px;
+}
+
+.links ul li:not(:last-child) a {
+  border-bottom: 2px solid #eee;
+}
+
+.landing {
+  background-image: url(../images/alpe-di-siusi-sunrise-with-sassolungo-or-langkofel-royalty-free-image-1623254127.jpg);
+  background-size: cover;
+
+  height: calc(100vh - 64px);
+  position: relative;
+}
+
+.landing .intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 320px;
+  max-width: 100%;
+}
+
+.landing .intro-text h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.features .feat {
+  padding: 20px;
+  text-align: center;
+}
+
+.features .feat i {
+  color: var(--main-color);
+}
+
+.features .feat h3 {
+  font-weight: 800;
+  margin: 30px 0;
+
+}
+
+.features .feat p {
+  line-height: 1.8;
+  color: #777;
+  font-size: 17px;
+}
+
+.Services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.Services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.services-content .serv {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+@media(max-width:767px) {
+  .services-content .serv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.serv i {
+  color: var(--main-color);
+  flex-basis: 60px;
+}
+
+.serv .text {
+  flex: 1;
+}
+
+.serv .text h3 {
+  margin: 0 0 20px;
+}
+
+.serv .text p {
+  color: #444;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.Services .image {
+  text-align: center;
+  position: relative;
+
+}
+
+.Services .image img {
+  height: 350px;
+  width: 260px;
+}
+
+.Services .image::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: calc(100% + 100px);
+  top: -50px;
+  z-index: -1;
+}
+
+@media(max-width:1199px) {
+  .image-column {
+    display: none;
+  }
+}
+
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+
+.portfolio .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+
+.portfolio .portfolio-content .card {
+  background-color: white;
+}
+
+.portfolio .portfolio-content .card img {
+  max-width: 100%;
+  height: 300px;
+  width: 400px;
+}
+
+.portfolio .portfolio-content .card .info {
+  padding: 20px;
+}
+
+.portfolio .portfolio-content .card .info h3 {
+  margin: 0;
+}
+
+.portfolio .portfolio-content .card .info p {
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.about {
+  padding-top: var(--section-padding);
+  padding-bottom: calc(var(--section-padding) + 60px);
+}
+
+.about-content {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media(max-width: 991px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.about-content .image img {
+  max-width: 100%;
+  height: 380px;
+  width: 300px;
+}
+
+
+.about-content .image {
+  position: relative;
+  height: 375px;
+  width: 250px;
+}
+
+@media(max-width: 991px) {
+  .about-content .image {
+    margin: 0 auto 60px;
+
+  }
+}
+
+.about-content .image::before {
+  content: '';
+  position: absolute;
+  background-color: #ebeced;
+  width: 100px;
+  height: calc(100% + 70px);
+  top: -35px;
+  left: -15px;
+  z-index: -1;
+}
+
+.about-content .image::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  top: -35px;
+  /* background-color: var(--main-color); */
+  right: -150px;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
+  z-index: -1;
+}
+
+@media(max-width: 991px) {
+
+  .about-content .image::before,
+  .about-content .image::after {
+    display: none;
+  }
+}
+
+.about-content .text {
+  flex-basis: calc(100% - 500px);
+}
+
+.about-content .text p:first-of-type {
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+
+.about-content .text hr {
+  border-color: var(--main-color);
+  width: 50%;
+  display: inline-block;
+}
+
+.about-content .text p:last-of-type {
+  line-height: 2;
+  color: #777;
+}
+
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+
+.contact .info {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+}
+
+.contact .info .label {
+  font-weight: 800;
+  font-size: 35px;
+  color: var(--secondary-color);
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+.contact .info .link {
+  display: block;
+  font-weight: 800;
+  font-size: 35px;
+  color: var(--main-color);
+  text-decoration: none;
+
+}
+
+.contact .info .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.contact .info .social i {
+  color: var(--secondary-color);
+  margin-left: 10px;
+
+}
+
+@media(max-width:767px) {
+
+  .contact .info .label,
+  .contact .info .link {
+    font-size: 25px;
+  }
+}
+
+.footer {
+  padding: 30px 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+.footer span {
+  font-weight: bold;
+  color: var(--main-color);
+}
