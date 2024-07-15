@@ -20,6 +20,43 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ScrollBar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #10cab740;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #10cab7;
+}
+
+.up {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-color);
+  border-radius: 6px;
+  right: -30px;
+  bottom: 10px;
+  text-align: center;
+  padding-top: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.up.show {
+  right: 10px;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -55,7 +92,7 @@ html {
   margin: 0;
 }
 
-.special_header+p {
+.special_head er+p {
   margin: -30px 0 0;
   font-size: 20px;
   text-align: center;
@@ -91,41 +128,42 @@ html {
 }
 
 .header .links .icon {
-  /* position: absolute; */
+  position: relative;
   width: 30px;
+  height: 14px;
+  cursor: pointer;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
-.header .links .icon:hover span:nth-child(2) {
-  width: 100%;
-}
-
 .header .links .icon span {
-  /* position: relative; */
-  display: inline-block;
+  position: absolute;
+  /* display: inline-block; */
   margin-bottom: 5px;
   height: 2px;
   background-color: #333;
 }
 
 .icon span:first-child {
+  top: 0;
   width: 100%;
 }
 
 .icon span:nth-child(2) {
+  top: 6px;
   width: 60%;
   transition: 0.3s;
 }
 
 .icon span:last-child {
+  top: 12px;
   width: 100%;
 }
 
-.header .links:hover ul {
+/* .header .links:hover ul {
   display: block;
-}
+} */
 
 .header .links ul {
   list-style: none;
@@ -194,6 +232,7 @@ html {
 .landing .intro-text p {
   font-size: 19px;
   line-height: 1.8;
+  font-weight: bold;
 }
 
 .features {
@@ -490,4 +529,26 @@ html {
 .footer span {
   font-weight: bold;
   color: var(--main-color);
+}
+
+
+
+/* My Last Edit With JavaScript */
+
+.Edit span:nth-child(2) {
+  opacity: 0;
+}
+
+.header .links .Edit span:first-child,
+.header .links .Edit span:last-child {
+  top: 3px;
+  background-color: red;
+}
+
+.Edit span:first-child {
+  transform: rotate(40deg);
+}
+
+.Edit span:last-child {
+  transform: rotate(-40deg);
 }
